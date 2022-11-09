@@ -87,29 +87,3 @@ target_link_libraries (luac
     PRIVATE lua-lib
 )
 
-add_library (lua-cpp
-    "lua-cpp/lua-cpp.hpp"
-    "lua-cpp/lua-cpp.cpp"
-    "lua-cpp/lua-utils.hpp"
-    "lua-cpp/lua-utils.cpp"
-)
-
-target_link_libraries (lua-cpp PUBLIC
-    lua-lib
-)
-
-target_include_directories (lua-cpp INTERFACE
-    "lua-cpp"
-)
-
-set_property(TARGET lua-cpp PROPERTY CXX_STANDARD 20)
-
-add_executable (lua-cpp-example
-    "lua-cpp-example/main.cpp"
-)
-
-target_link_libraries (lua-cpp-example PRIVATE
-    lua-cpp
-)
-
-set_property(TARGET lua-cpp-example PROPERTY CXX_STANDARD 20)
