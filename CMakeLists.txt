@@ -6,3 +6,4 @@ project (lua-cpp
 )
 
 add_subdirectory ("lua")
+add_subdirectory ("lua-cpp")
